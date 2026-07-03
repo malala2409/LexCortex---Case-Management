@@ -166,7 +166,7 @@ function validateTask() {
     return valid;
 }
 
-// ── AJAX: Task als erledigt markieren ────────────────────────
+// ── AJAX: Task als erledigt markieren / wieder öffnen (Toggle) ──
 function completeTask(taskId, checkbox) {
     $.ajax({
         url:  'ajax/complete_task.php',
@@ -174,12 +174,17 @@ function completeTask(taskId, checkbox) {
         data: { task_id: taskId },
         success: function (res) {
             if (res.success) {
-                // Checkbox visuell abhaken
-                $(checkbox).addClass('done').text('✓');
-                // Dashboard: alte Struktur (.task-item)
-                $(checkbox).closest('.task-item').find('.task-desc').addClass('done');
-                // Case-Detail: neue Struktur (.phase-task-item)
-                $(checkbox).closest('.phase-task-item').addClass('task-done');
+                if (res.erledigt) {
+                    // Als erledigt markieren
+                    $(checkbox).addClass('done').text('✓');
+                    $(checkbox).closest('.task-item').find('.task-desc').addClass('done');
+                    $(checkbox).closest('.phase-task-item').addClass('task-done');
+                } else {
+                    // Wieder öffnen
+                    $(checkbox).removeClass('done').text('');
+                    $(checkbox).closest('.task-item').find('.task-desc').removeClass('done');
+                    $(checkbox).closest('.phase-task-item').removeClass('task-done');
+                }
             }
         },
         error: function () {
