@@ -13,7 +13,7 @@ $beschreibung = trim($_POST['beschreibung']  ?? '');
 $startDate    = trim($_POST['start_date']    ?? date('Y-m-d'));
 $deadline     = trim($_POST['deadline']       ?? '');
 
-if (!$caseId || !$deadline) {
+if (!$caseId || !$phaseId || !$deadline) {
     header('Location: case_detail.php?id=' . $caseId);
     exit;
 }
@@ -26,7 +26,7 @@ $stmt = $db->prepare("
     INSERT INTO tasks (case_id, phase_id, beschreibung, start_date, deadline)
     VALUES (?, ?, ?, ?, ?)
 ");
-$stmt->execute([$caseId, $phaseId ?: null, $beschreibung, $startDate, $deadline]);
+$stmt->execute([$caseId, $phaseId, $beschreibung, $startDate, $deadline]);
 
 header('Location: case_detail.php?id=' . $caseId);
 exit;

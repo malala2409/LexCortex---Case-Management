@@ -139,6 +139,17 @@ function validateTask() {
     document.getElementById('task-desc').classList.remove('error');
     document.getElementById('task-deadline').classList.remove('error');
 
+    var phaseEl = document.getElementById('task-phase-select');
+    if (phaseEl) {
+        document.getElementById('err-task-phase').textContent = '';
+        phaseEl.classList.remove('error');
+        if (!phaseEl.value) {
+            document.getElementById('err-task-phase').textContent = 'Phase ist Pflichtfeld';
+            phaseEl.classList.add('error');
+            valid = false;
+        }
+    }
+
     if (!document.getElementById('task-desc').value.trim()) {
         document.getElementById('err-task-desc').textContent = 'Beschreibung ist Pflichtfeld';
         document.getElementById('task-desc').classList.add('error');

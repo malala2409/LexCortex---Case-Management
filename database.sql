@@ -41,14 +41,14 @@ CREATE TABLE phases (
 CREATE TABLE deadlines (
   id              INT AUTO_INCREMENT PRIMARY KEY,
   case_id         INT NOT NULL,
-  phase_id        INT,
+  phase_id        INT NOT NULL,
   title           VARCHAR(255) NOT NULL,
   deadline_date   DATE NOT NULL,
   frist_type      VARCHAR(50),
   auto_calculated BOOLEAN DEFAULT FALSE,
   erledigt        BOOLEAN DEFAULT FALSE,
   FOREIGN KEY (case_id)  REFERENCES cases(id)  ON DELETE CASCADE,
-  FOREIGN KEY (phase_id) REFERENCES phases(id) ON DELETE SET NULL
+  FOREIGN KEY (phase_id) REFERENCES phases(id) ON DELETE CASCADE
 );
 
 -- ------------------------------------------------------------
@@ -57,13 +57,13 @@ CREATE TABLE deadlines (
 CREATE TABLE tasks (
   id           INT AUTO_INCREMENT PRIMARY KEY,
   case_id      INT NOT NULL,
-  phase_id     INT,
+  phase_id     INT NOT NULL,
   beschreibung VARCHAR(255) NOT NULL,
   deadline     DATE NOT NULL,
   start_date   DATE DEFAULT NULL,
   erledigt     BOOLEAN DEFAULT FALSE,
   FOREIGN KEY (case_id)  REFERENCES cases(id)  ON DELETE CASCADE,
-  FOREIGN KEY (phase_id) REFERENCES phases(id) ON DELETE SET NULL
+  FOREIGN KEY (phase_id) REFERENCES phases(id) ON DELETE CASCADE
 );
 
 -- ============================================================

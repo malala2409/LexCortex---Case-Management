@@ -274,14 +274,15 @@ $phase_descriptions = [
           </div>
           <div class="form-group">
             <label>Phase</label>
-            <select name="phase_id" style="width:180px;">
-              <option value="">— Ohne Phase —</option>
+            <select name="phase_id" id="task-phase-select" style="width:180px;">
+              <option value="">— Phase wählen —</option>
               <?php foreach ($phases as $ph): ?>
               <option value="<?= $ph['id'] ?>" <?= $ph['status'] === 'active' ? 'selected' : '' ?>>
                 <?= htmlspecialchars($ph['title']) ?>
               </option>
               <?php endforeach; ?>
             </select>
+            <div class="form-err" id="err-task-phase"></div>
           </div>
           <div class="form-group">
             <label>Deadline *</label>
