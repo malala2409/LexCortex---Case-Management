@@ -27,7 +27,7 @@ $today_tasks = $db->query("
            DATEDIFF(t.deadline, CURDATE()) AS days_until_deadline
     FROM tasks t
     JOIN cases c ON c.id = t.case_id
-    WHERE t.start_date <= CURDATE() AND t.erledigt = 0
+    WHERE t.deadline <= CURDATE() AND t.erledigt = 0
     ORDER BY t.deadline ASC
     LIMIT 6
 ")->fetchAll();

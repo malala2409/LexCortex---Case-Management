@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c:chartSpace xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <c:date1904 val="0"/>
+  <c:lang val="zh-CN"/>
+  <c:roundedCorners val="0"/>
+  <mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <mc:Choice xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart" Requires="c14">
+      <c14:style val="102"/>
+    </mc:Choice>
+    <mc:Fallback>
+      <c:style val="2"/>
+    </mc:Fallback>
+  </mc:AlternateContent>
+  <c:chart>
+    <c:autoTitleDeleted val="1"/>
+    <c:plotArea>
+      <c:layout>
+        <c:manualLayout>
+          <c:layoutTarget val="inner"/>
+          <c:xMode val="edge"/>
+          <c:yMode val="edge"/>
+          <c:x val="0.127737987859877"/>
+          <c:y val="0.0999327850530762"/>
+          <c:w val="0.744523780502669"/>
+          <c:h val="0.668235380092648"/>
+        </c:manualLayout>
+      </c:layout>
+      <c:doughnutChart>
+        <c:varyColors val="1"/>
+        <c:ser>
+          <c:idx val="0"/>
+          <c:order val="0"/>
+          <c:tx>
+            <c:strRef>
+              <c:f>Tabelle1!$B$1</c:f>
+              <c:strCache>
+                <c:ptCount val="1"/>
+                <c:pt idx="0">
+                  <c:v>Verkauf</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:tx>
+          <c:spPr>
+            <a:ln w="12700">
+              <a:noFill/>
+            </a:ln>
+          </c:spPr>
+          <c:explosion val="0"/>
+          <c:dPt>
+            <c:idx val="0"/>
+            <c:bubble3D val="0"/>
+            <c:spPr>
+              <a:solidFill>
+                <a:schemeClr val="accent1"/>
+              </a:solidFill>
+              <a:ln w="12700">
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+          </c:dPt>
+          <c:dPt>
+            <c:idx val="1"/>
+            <c:bubble3D val="0"/>
+            <c:spPr>
+              <a:solidFill>
+                <a:schemeClr val="accent2"/>
+              </a:solidFill>
+              <a:ln w="12700">
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+          </c:dPt>
+          <c:dPt>
+            <c:idx val="2"/>
+            <c:bubble3D val="0"/>
+            <c:spPr>
+              <a:solidFill>
+                <a:schemeClr val="accent3"/>
+              </a:solidFill>
+              <a:ln w="12700">
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+          </c:dPt>
+          <c:dPt>
+            <c:idx val="3"/>
+            <c:bubble3D val="0"/>
+            <c:spPr>
+              <a:solidFill>
+                <a:schemeClr val="accent4"/>
+              </a:solidFill>
+              <a:ln w="12700">
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+          </c:dPt>
+          <c:dPt>
+            <c:idx val="4"/>
+            <c:bubble3D val="0"/>
+            <c:spPr>
+              <a:solidFill>
+                <a:schemeClr val="accent5"/>
+              </a:solidFill>
+              <a:ln w="12700">
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+          </c:dPt>
+          <c:dPt>
+            <c:idx val="5"/>
+            <c:bubble3D val="0"/>
+            <c:spPr>
+              <a:solidFill>
+                <a:schemeClr val="accent6"/>
+              </a:solidFill>
+              <a:ln w="12700">
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+          </c:dPt>
+          <c:dLbls>
+            <c:dLbl>
+              <c:idx val="0"/>
+              <c:layout>
+                <c:manualLayout>
+                  <c:x val="0.0510737086477075"/>
+                  <c:y val="-0.0611323443050648"/>
+                </c:manualLayout>
+              </c:layout>
+              <c:showLegendKey val="0"/>
+              <c:showVal val="1"/>
+              <c:showCatName val="0"/>
+              <c:showSerName val="0"/>
+              <c:showPercent val="0"/>
+              <c:showBubbleSize val="0"/>
+              <c:extLst>
+                <c:ext xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart" uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}">
+                  <c15:layout/>
+                </c:ext>
+              </c:extLst>
+            </c:dLbl>
+            <c:dLbl>
+              <c:idx val="1"/>
+              <c:layout>
+                <c:manualLayout>
+                  <c:x val="0.0673244341265235"/>
+                  <c:y val="-0.0138937146147875"/>
+                </c:manualLayout>
+              </c:layout>
+              <c:showLegendKey val="0"/>
+              <c:showVal val="1"/>
+              <c:showCatName val="0"/>
+              <c:showSerName val="0"/>
+              <c:showPercent val="0"/>
+              <c:showBubbleSize val="0"/>
+              <c:extLst>
+                <c:ext xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart" uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}">
+                  <c15:layout/>
+                </c:ext>
+              </c:extLst>
+            </c:dLbl>
+            <c:dLbl>
+              <c:idx val="2"/>
+              <c:layout>
+                <c:manualLayout>
+                  <c:x val="0.0464306442251887"/>
+                  <c:y val="0.0555748584591499"/>
+                </c:manualLayout>
+              </c:layout>
+              <c:showLegendKey val="0"/>
+              <c:showVal val="1"/>
+              <c:showCatName val="0"/>
+              <c:showSerName val="0"/>
+              <c:showPercent val="0"/>
+              <c:showBubbleSize val="0"/>
+              <c:extLst>
+                <c:ext xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart" uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}">
+                  <c15:layout/>
+                </c:ext>
+              </c:extLst>
+            </c:dLbl>
+            <c:dLbl>
+              <c:idx val="3"/>
+              <c:layout>
+                <c:manualLayout>
+                  <c:x val="-0.0348229831688915"/>
+                  <c:y val="0.0666898301509799"/>
+                </c:manualLayout>
+              </c:layout>
+              <c:showLegendKey val="0"/>
+              <c:showVal val="1"/>
+              <c:showCatName val="0"/>
+              <c:showSerName val="0"/>
+              <c:showPercent val="0"/>
+              <c:showBubbleSize val="0"/>
+              <c:extLst>
+                <c:ext xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart" uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}">
+                  <c15:layout/>
+                </c:ext>
+              </c:extLst>
+            </c:dLbl>
+            <c:dLbl>
+              <c:idx val="4"/>
+              <c:layout>
+                <c:manualLayout>
+                  <c:x val="-0.0650029019152641"/>
+                  <c:y val="-0.0138937146147875"/>
+                </c:manualLayout>
+              </c:layout>
+              <c:showLegendKey val="0"/>
+              <c:showVal val="1"/>
+              <c:showCatName val="0"/>
+              <c:showSerName val="0"/>
+              <c:showPercent val="0"/>
+              <c:showBubbleSize val="0"/>
+              <c:extLst>
+                <c:ext xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart" uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}">
+                  <c15:layout/>
+                </c:ext>
+              </c:extLst>
+            </c:dLbl>
+            <c:dLbl>
+              <c:idx val="5"/>
+              <c:layout>
+                <c:manualLayout>
+                  <c:x val="-0.0487521764364481"/>
+                  <c:y val="-0.0611323443050649"/>
+                </c:manualLayout>
+              </c:layout>
+              <c:showLegendKey val="0"/>
+              <c:showVal val="1"/>
+              <c:showCatName val="0"/>
+              <c:showSerName val="0"/>
+              <c:showPercent val="0"/>
+              <c:showBubbleSize val="0"/>
+              <c:extLst>
+                <c:ext xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart" uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}">
+                  <c15:layout/>
+                </c:ext>
+              </c:extLst>
+            </c:dLbl>
+            <c:spPr>
+              <a:noFill/>
+              <a:ln>
+                <a:noFill/>
+              </a:ln>
+              <a:effectLst/>
+            </c:spPr>
+            <c:txPr>
+              <a:bodyPr rot="0" spcFirstLastPara="1" vertOverflow="ellipsis" vert="horz" wrap="square" lIns="38100" tIns="19050" rIns="38100" bIns="19050" anchor="ctr" anchorCtr="1">
+                <a:spAutoFit/>
+              </a:bodyPr>
+              <a:lstStyle/>
+              <a:p>
+                <a:pPr>
+                  <a:defRPr lang="zh-CN" sz="1400" b="0" i="0" u="none" strike="noStrike" kern="1200" baseline="0">
+                    <a:solidFill>
+                      <a:schemeClr val="tx1"/>
+                    </a:solidFill>
+                    <a:latin typeface="+mn-lt"/>
+                    <a:ea typeface="+mn-ea"/>
+                    <a:cs typeface="+mn-cs"/>
+                  </a:defRPr>
+                </a:pPr>
+              </a:p>
+            </c:txPr>
+            <c:showLegendKey val="0"/>
+            <c:showVal val="1"/>
+            <c:showCatName val="0"/>
+            <c:showSerName val="0"/>
+            <c:showPercent val="0"/>
+            <c:showBubbleSize val="0"/>
+            <c:showLeaderLines val="1"/>
+            <c:extLst>
+              <c:ext xmlns:c15="http://schemas.microsoft.com/office/drawing/2012/chart" uri="{CE6537A1-D6FC-4f65-9D91-7224C49458BB}">
+                <c15:layout/>
+                <c15:showLeaderLines val="1"/>
+                <c15:leaderLines>
+                  <c:spPr>
+                    <a:ln w="9525" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:schemeClr val="tx1">
+                          <a:lumMod val="35000"/>
+                          <a:lumOff val="65000"/>
+                        </a:schemeClr>
+                      </a:solidFill>
+                      <a:round/>
+                    </a:ln>
+                    <a:effectLst/>
+                  </c:spPr>
+                </c15:leaderLines>
+              </c:ext>
+            </c:extLst>
+          </c:dLbls>
+          <c:cat>
+            <c:strRef>
+              <c:f>Tabelle1!$A$2:$A$7</c:f>
+              <c:strCache>
+                <c:ptCount val="6"/>
+                <c:pt idx="0">
+                  <c:v>#7F7F7F</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>#662938</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>#971B2F</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>#C50f3C</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>#EBCCB7</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>#C7C7C7</c:v>
+                </c:pt>
+              </c:strCache>
+            </c:strRef>
+          </c:cat>
+          <c:val>
+            <c:numRef>
+              <c:f>Tabelle1!$B$2:$B$7</c:f>
+              <c:numCache>
+                <c:formatCode>General</c:formatCode>
+                <c:ptCount val="6"/>
+                <c:pt idx="0">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="1">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="2">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="3">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="4">
+                  <c:v>1</c:v>
+                </c:pt>
+                <c:pt idx="5">
+                  <c:v>1</c:v>
+                </c:pt>
+              </c:numCache>
+            </c:numRef>
+          </c:val>
+        </c:ser>
+        <c:dLbls>
+          <c:showLegendKey val="0"/>
+          <c:showVal val="0"/>
+          <c:showCatName val="0"/>
+          <c:showSerName val="0"/>
+          <c:showPercent val="0"/>
+          <c:showBubbleSize val="0"/>
+          <c:showLeaderLines val="1"/>
+        </c:dLbls>
+        <c:firstSliceAng val="0"/>
+        <c:holeSize val="80"/>
+      </c:doughnutChart>
+      <c:spPr>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:effectLst/>
+      </c:spPr>
+    </c:plotArea>
+    <c:legend>
+      <c:legendPos val="b"/>
+      <c:layout>
+        <c:manualLayout>
+          <c:xMode val="edge"/>
+          <c:yMode val="edge"/>
+          <c:x val="0.000512565064596161"/>
+          <c:y val="0.897042542335352"/>
+          <c:w val="0.999487434935404"/>
+          <c:h val="0.102957457664648"/>
+        </c:manualLayout>
+      </c:layout>
+      <c:overlay val="0"/>
+      <c:spPr>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:effectLst/>
+      </c:spPr>
+      <c:txPr>
+        <a:bodyPr rot="0" spcFirstLastPara="1" vertOverflow="ellipsis" vert="horz" wrap="square" anchor="ctr" anchorCtr="1"/>
+        <a:lstStyle/>
+        <a:p>
+          <a:pPr>
+            <a:defRPr lang="zh-CN" sz="1400" b="0" i="0" u="none" strike="noStrike" kern="1200" baseline="0">
+              <a:solidFill>
+                <a:schemeClr val="tx1"/>
+              </a:solidFill>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+              <a:cs typeface="+mn-cs"/>
+            </a:defRPr>
+          </a:pPr>
+        </a:p>
+      </c:txPr>
+    </c:legend>
+    <c:plotVisOnly val="1"/>
+    <c:dispBlanksAs val="gap"/>
+    <c:showDLblsOverMax val="0"/>
+    <c:extLst>
+      <c:ext uri="{0b15fc19-7d7d-44ad-8c2d-2c3a37ce22c3}">
+        <chartProps xmlns="https://web.wps.cn/et/2018/main" chartId="{189cabbe-47cc-400c-84f9-ea29738d15f6}"/>
+      </c:ext>
+    </c:extLst>
+  </c:chart>
+  <c:spPr>
+    <a:noFill/>
+    <a:ln>
+      <a:noFill/>
+    </a:ln>
+    <a:effectLst/>
+  </c:spPr>
+  <c:txPr>
+    <a:bodyPr/>
+    <a:lstStyle/>
+    <a:p>
+      <a:pPr>
+        <a:defRPr lang="zh-CN"/>
+      </a:pPr>
+    </a:p>
+  </c:txPr>
+  <c:externalData r:id="rId1">
+    <c:autoUpdate val="0"/>
+  </c:externalData>
+</c:chartSpace>
