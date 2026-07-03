@@ -1,0 +1,8 @@
+# SQL-Dateien immer mit LF (Unix) ausliefern — phpMyAdmin & MAMP brauchen das so
+*.sql text eol=lf
+
+# PHP/JS/CSS ebenfalls LF
+*.php text eol=lf
+*.js  text eol=lf
+*.css text eol=lf
+*.md  text eol=lf
