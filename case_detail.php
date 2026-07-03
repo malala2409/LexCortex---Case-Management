@@ -35,16 +35,16 @@ $pct   = $total > 0 ? round(($done / $total) * 100) : 0;
 
 // Beschreibungen pro Phase
 $phase_descriptions = [
-    'mahnung'              => 'Schriftliche Mahnung an den Schuldner wurde versandt. Die Zahlung blieb aus.',
-    'klageerhebung'        => 'Klageschrift wurde beim zuständigen Gericht eingereicht.',
-    'zustellung'           => 'Zustellung der Klageschrift an den Beklagten. Dieses Datum ist das Schlüsseldatum und löst automatisch die Notfrist für die Verteidigungsanzeige aus (+14 Tage).',
-    'verteidigungsanzeige' => 'Der Beklagte muss innerhalb von 14 Tagen nach Zustellung seine Verteidigungsbereitschaft anzeigen (§ 276 ZPO). Bei Versäumnis kann Versäumnisurteil beantragt werden.',
-    'klageerwiderung'      => 'Das Gericht setzt dem Beklagten eine Frist zur Einreichung der Klageerwiderung.',
-    'replik'               => 'Erwiderung des Klägers auf die Klageerwiderung des Beklagten (Replik). Gerichtliche Frist.',
-    'gueteverhandlung'     => 'Gerichtlicher Güteversuch (§ 278 ZPO). Das Gericht lädt zu einem Gütetermin.',
-    'muendliche_verh'      => 'Hauptverhandlungstermin vor Gericht. Beide Parteien tragen ihre Positionen mündlich vor.',
-    'urteil'               => 'Verkündung des Urteils. Bei Zustellung des Urteils läuft automatisch die Berufungsfrist von 30 Tagen ab.',
-    'rechtskraft'          => 'Das Urteil ist rechtskräftig. Vollstreckungsmaßnahmen können eingeleitet werden.',
+    'Vorgerichtliche Mahnung' => 'Schriftliche Mahnung an den Schuldner wurde versandt. Die Zahlung blieb aus.',
+    'Klageerhebung'           => 'Klageschrift wurde beim zuständigen Gericht eingereicht.',
+    'Zustellung'              => 'Zustellung der Klageschrift an den Beklagten. Dieses Datum ist das Schlüsseldatum und löst automatisch die Notfrist für die Verteidigungsanzeige aus (+14 Tage).',
+    'Verteidigungsanzeige'    => 'Der Beklagte muss innerhalb von 14 Tagen nach Zustellung seine Verteidigungsbereitschaft anzeigen (§ 276 ZPO). Bei Versäumnis kann Versäumnisurteil beantragt werden.',
+    'Klageerwiderung'         => 'Das Gericht setzt dem Beklagten eine Frist zur Einreichung der Klageerwiderung.',
+    'Replik'                  => 'Erwiderung des Klägers auf die Klageerwiderung des Beklagten (Replik). Gerichtliche Frist.',
+    'Güteverhandlung'         => 'Gerichtlicher Güteversuch (§ 278 ZPO). Das Gericht lädt zu einem Gütetermin.',
+    'Mündliche Verhandlung'   => 'Hauptverhandlungstermin vor Gericht. Beide Parteien tragen ihre Positionen mündlich vor.',
+    'Urteil'                  => 'Verkündung des Urteils. Bei Zustellung des Urteils läuft automatisch die Berufungsfrist von 30 Tagen ab.',
+    'Rechtskraft / Vollstreckung' => 'Das Urteil ist rechtskräftig. Vollstreckungsmaßnahmen können eingeleitet werden.',
 ];
 ?>
 <!DOCTYPE html>
@@ -126,7 +126,7 @@ $phase_descriptions = [
 
       <?php foreach ($phases as $i => $ph): ?>
       <?php
-        $desc = $phase_descriptions[$ph['phase_key']] ?? '';
+        $desc = $phase_descriptions[$ph['title']] ?? '';
         $dotClass = match($ph['status']) {
             'done'   => 'done',
             'active' => 'active',
@@ -191,7 +191,7 @@ $phase_descriptions = [
             <input type="date" id="date-<?= $ph['id'] ?>"
                    value="<?= $ph['phase_date'] ?? date('Y-m-d') ?>">
             <button class="btn btn-green btn-sm"
-                    onclick="completePhase(<?= $ph['id'] ?>, <?= $id ?>, '<?= $ph['phase_key'] ?>')">
+                    onclick="completePhase(<?= $ph['id'] ?>, <?= $id ?>, '<?= htmlspecialchars($ph['title']) ?>')">
               ✓ Phase abschließen
             </button>
             <button class="btn btn-ghost btn-sm"

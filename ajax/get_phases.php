@@ -20,7 +20,7 @@ try {
 
     // Nur Phasen laden, die noch nicht abgeschlossen sind (pending + active)
     $stmt = $db->prepare("
-        SELECT id, phase_key, title, status
+        SELECT id, title, status
         FROM phases
         WHERE case_id = ? AND status IN ('pending', 'active')
         ORDER BY id ASC

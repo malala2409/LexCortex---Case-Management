@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $phaseId  = (int)($_POST['phase_id']  ?? 0);
 $caseId   = (int)($_POST['case_id']   ?? 0);
-$phaseKey = trim($_POST['phase_key']  ?? '');
+$phaseTitle = trim($_POST['phase_title']  ?? '');
 $date     = trim($_POST['date']       ?? '');
 
 if (!$phaseId || !$caseId || !$date) {
@@ -40,7 +40,7 @@ try {
     // Automatische Fristberechnung bei Schlüsseldaten
     $autoMsg = null;
 
-    if ($phaseKey === 'zustellung') {
+    if ($phaseTitle === 'Zustellung') {
         // Verteidigungsanzeige: Zustellung + 14 Tage
         $frist = (new DateTime($date))->modify('+14 days')->format('Y-m-d');
         $db->prepare("
@@ -49,12 +49,12 @@ try {
             ON DUPLICATE KEY UPDATE deadline_date = VALUES(deadline_date)
         ")->execute([$caseId, $phaseId, $frist]);
         // Auch Phase-Datum der Verteidigungsanzeige setzen
-        $db->prepare("UPDATE phases SET phase_date = ? WHERE case_id = ? AND phase_key = 'verteidigungsanzeige'")
+        $db->prepare("UPDATE phases SET phase_date = ? WHERE case_id = ? AND title = 'Verteidigungsanzeige'")
            ->execute([$frist, $caseId]);
         $autoMsg = 'Verteidigungsanzeige fällig am ' . (new DateTime($frist))->format('d.m.Y');
     }
 
-    if ($phaseKey === 'urteil') {
+    if ($phaseTitle === 'Urteil') {
         // Berufungsfrist: Urteil + 30 Tage
         $frist = (new DateTime($date))->modify('+30 days')->format('Y-m-d');
         $db->prepare("

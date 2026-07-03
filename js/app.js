@@ -178,7 +178,7 @@ function completeTask(taskId, checkbox) {
 }
 
 // ── AJAX: Phase abschließen ──────────────────────────────────
-function completePhase(phaseId, caseId, phaseKey) {
+function completePhase(phaseId, caseId, phaseTitle) {
     var dateVal = document.getElementById('date-' + phaseId).value;
     if (!dateVal) {
         alert('Bitte zuerst ein Datum eingeben.');
@@ -188,7 +188,7 @@ function completePhase(phaseId, caseId, phaseKey) {
     $.ajax({
         url:  'ajax/complete_phase.php',
         type: 'POST',
-        data: { phase_id: phaseId, case_id: caseId, phase_key: phaseKey, date: dateVal },
+        data: { phase_id: phaseId, case_id: caseId, phase_title: phaseTitle, date: dateVal },
         success: function (res) {
             if (res.success) {
                 // Dot auf grün setzen

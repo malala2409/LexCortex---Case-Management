@@ -28,23 +28,23 @@ $caseId = (int)$db->lastInsertId();
 
 // Alle 10 Phasen der Zahlungsklage anlegen
 $phasen = [
-    ['mahnung',              'Vorgerichtliche Mahnung',    null,            null],
-    ['klageerhebung',        'Klageerhebung',              null,            null],
-    ['zustellung',           'Zustellung',                 $zustellungDatum,'schluessel'],
-    ['verteidigungsanzeige', 'Verteidigungsanzeige',       null,            'notfrist'],
-    ['klageerwiderung',      'Klageerwiderung',            null,            'gerichtsfrist'],
-    ['replik',               'Replik',                     null,            'gerichtsfrist'],
-    ['gueteverhandlung',     'Güteverhandlung',            null,            'termin'],
-    ['muendliche_verh',      'Mündliche Verhandlung',      null,            'termin'],
-    ['urteil',               'Urteil',                     null,            'urteil'],
-    ['rechtskraft',          'Rechtskraft / Vollstreckung',null,            null],
+    ['Vorgerichtliche Mahnung',    null,            null],
+    ['Klageerhebung',              null,            null],
+    ['Zustellung',                 $zustellungDatum,'schluessel'],
+    ['Verteidigungsanzeige',       null,            'notfrist'],
+    ['Klageerwiderung',            null,            'gerichtsfrist'],
+    ['Replik',                     null,            'gerichtsfrist'],
+    ['Güteverhandlung',            null,            'termin'],
+    ['Mündliche Verhandlung',      null,            'termin'],
+    ['Urteil',                     null,            'urteil'],
+    ['Rechtskraft / Vollstreckung',null,            null],
 ];
 
-$phaseStmt = $db->prepare("INSERT INTO phases (case_id, phase_key, title, phase_date, frist_type, status) VALUES (?, ?, ?, ?, ?, ?)");
+$phaseStmt = $db->prepare("INSERT INTO phases (case_id, title, phase_date, frist_type, status) VALUES (?, ?, ?, ?, ?)");
 $isFirst = true;
-foreach ($phasen as [$key, $title, $date, $fristType]) {
+foreach ($phasen as [$title, $date, $fristType]) {
     $status = $isFirst ? 'active' : 'pending';
-    $phaseStmt->execute([$caseId, $key, $title, $date, $fristType, $status]);
+    $phaseStmt->execute([$caseId, $title, $date, $fristType, $status]);
     $isFirst = false;
 }
 
