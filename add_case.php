@@ -40,9 +40,12 @@ $phasen = [
     ['rechtskraft',          'Rechtskraft / Vollstreckung',null,            null],
 ];
 
-$phaseStmt = $db->prepare("INSERT INTO phases (case_id, phase_key, title, phase_date, frist_type) VALUES (?, ?, ?, ?, ?)");
+$phaseStmt = $db->prepare("INSERT INTO phases (case_id, phase_key, title, phase_date, frist_type, status) VALUES (?, ?, ?, ?, ?, ?)");
+$isFirst = true;
 foreach ($phasen as [$key, $title, $date, $fristType]) {
-    $phaseStmt->execute([$caseId, $key, $title, $date, $fristType]);
+    $status = $isFirst ? 'active' : 'pending';
+    $phaseStmt->execute([$caseId, $key, $title, $date, $fristType, $status]);
+    $isFirst = false;
 }
 
 // Automatische Fristberechnung: Zustellungsdatum → Verteidigungsanzeige +14 Tage
