@@ -277,18 +277,24 @@ select.filter {
   text-transform: uppercase;
   letter-spacing: 0.4px;
   padding: 4px 0;
+  min-width: 0;
+  overflow: hidden;
 }
 .cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
 .cal-day {
-  min-height: 80px;
+  height: 100px;
+  min-width: 0;
+  overflow: hidden;
   border-radius: 8px;
   border: 0.5px solid var(--border);
   padding: 6px;
   background: var(--card);
+  display: flex;
+  flex-direction: column;
 }
 .cal-day.other-month { background: #fafaf9; }
 .cal-day.today { border-color: var(--primary); border-width: 1.5px; }
-.cal-day-num { font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 4px; }
+.cal-day-num { font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 4px; flex-shrink: 0; }
 .cal-day.today .cal-day-num {
   background: var(--primary);
   color: #fff;
@@ -327,6 +333,15 @@ select.filter {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  flex-shrink: 0;
+}
+.cal-more {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  cursor: pointer;
+  margin-top: auto;
+  padding-top: 2px;
 }
 .cal-event.red    { background: #fee2e2; color: var(--red); }
 .cal-event.orange { background: #fff7ed; color: var(--orange); }

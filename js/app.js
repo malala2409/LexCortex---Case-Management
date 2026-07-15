@@ -700,8 +700,10 @@ function renderCalendar() {
 
         // Events aus calEvents (Deadlines + Tasks)
         var dateStr = y + '-' + String(m + 1).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+        var fmtDate = day + '.' + String(m + 1).padStart(2, '0') + '.' + y;
         var dayEvents = calEvents[dateStr] || [];
-        dayEvents.forEach(function (ev) {
+        var maxVisible = 2;  // max sichtbare Pills, Rest als "+N mehr"
+        dayEvents.slice(0, maxVisible).forEach(function (ev) {
             var pill = document.createElement('a');
             if (ev.type === 'task') {
                 // Task-Pill: grau / warn / rot je nach Deadline-Nähe
@@ -729,11 +731,25 @@ function renderCalendar() {
             cell.appendChild(pill);
         });
 
+        // "+N mehr" wenn zu viele Events
+        if (dayEvents.length > maxVisible) {
+            var more = document.createElement('span');
+            more.className = 'cal-more';
+            more.textContent = '+' + (dayEvents.length - maxVisible) + ' mehr';
+            more.title = 'Klicken für alle Termine';
+            (function(ds, fd) {
+                more.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openDayModal(ds, fd);
+                });
+            })(dateStr, fmtDate);
+            cell.appendChild(more);
+        }
+
         container.appendChild(cell);
 
         // Tag-Klick → Tagesübersicht (nur aktueller Monat)
         if (!isOther) {
-            var fmtDate = day + '.' + String(m + 1).padStart(2, '0') + '.' + y;
             (function(ds, fd) {
                 cell.addEventListener('click', function(e) {
                     // Nicht feuern wenn + oder Event-Pill geklickt wurde
@@ -752,8 +768,6 @@ function renderCalendar() {
             addBtn.className = 'cal-add-task';
             addBtn.textContent = '+';
             addBtn.title = 'Neue Aufgabe';
-
-            var fmtDate = day + '.' + String(m + 1).padStart(2, '0') + '.' + y;
 
             (function(ds, fd) {
                 addBtn.addEventListener('click', function(e) {

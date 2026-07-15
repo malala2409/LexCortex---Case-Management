@@ -127,7 +127,7 @@ function fristBadge(?string $fristType, string $phaseStatus): string {
 <head>
   <meta charset="UTF-8">
   <title>LexCortex</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -433,6 +433,6 @@ function fristBadge(?string $fristType, string $phaseStatus): string {
   const CASES      = <?= json_encode($cases_for_js) ?>;
 </script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/app.js?v=2"></script>
 </body>
 </html>
